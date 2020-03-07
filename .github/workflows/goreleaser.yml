@@ -27,7 +27,3 @@ jobs:
           key: ${{ secrets.YOUR_PRIVATE_KEY }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Run GoReleaser
-        if: steps.semantic.outputs.new_release_published == 'true'
-        uses: ./.github/actions/goreleaser
